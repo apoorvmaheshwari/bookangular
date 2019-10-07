@@ -1,32 +1,34 @@
-<form (ngSubmit)="createAddress()">
+<form  (ngSubmit)="createAddress()" >
     <div class="form-group">
         <label for="exampleInputName">Name</label>
-        <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Full Name">
+        <input type="text" [(ngModel)]="name"  name="name" class="form-control" id="exampleInputName" placeholder="Enter Full Name">
 
     </div>
     <div class="form-group">
         <label for="exampleInputAddress">Address Line 1</label>
-        <input type="text" class="form-control" id="exampleInputAddressline1" placeholder="Enter House Number">
+        <input type="text" [(ngModel)]="addressline1" name="addressline1" class="form-control" id="exampleInputAddressline1" placeholder="Enter House Number">
 
     </div>
     <div class="form-group">
         <label for="exampleInputName">Address Line2</label>
-        <input type="text" class="form-control" id="exampleInputAddressline2" placeholder="Address Line 2">
+        <input type="text" [(ngModel)]="addressline2" name="addressline2" class="form-control" id="exampleInputAddressline2" placeholder="Address Line 2">
 
     </div>
     <div class="form-group">
         <label for="exampleInputName">Address Line 3</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        <input type="text" [(ngModel)]="addressline3" name="addressline3" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
             placeholder="Enter Full Name">
 
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Credit Card Number</label>
-        <input type="number" class="form-control" id="exampleInputCard Details"
+        <input type="number" name="creditcard" [(ngModel)]="creditcard" class="form-control" id="exampleInputCard Details"
             placeholder="Enter 16 digit Card Number">
         <small id="cardHelp" class="form-text text-muted">We'll never share your Card Details with anyone else.</small>
     </div>
 
-    <a routerLink="" class="btn btn-success">Add to Cart</a> &nbsp;&nbsp;
+    <button type="Submit" class="btn btn-success">Submit</button> &nbsp;&nbsp;
+    
     
 </form>
+<a routerLink="/bill" class="btn btn-success">Generate Bill</a> &nbsp;&nbsp;

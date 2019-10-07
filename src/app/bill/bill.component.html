@@ -1,1 +1,33 @@
-<p>bill works!</p>
+<div class="row">
+    <div class="col-md-6">
+        <p><strong> Order Placed Succesfully</strong></p>
+        <p>Name:{{name}}</p>
+        <p>Address:{{addressline1}}</p>
+        <p>{{addressline2}}</p>
+        <p>{{addressline3}}</p>
+        
+
+    </div>
+    <div class="col-md-6">
+            <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        
+                        <th scope="col">Book Title</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let book of cart.cart">
+                       
+                        <td>{{book.name}}</td>
+                        <td>{{book.author}}</td>
+                        <td>{{book.price}}</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  <label><strong>Price:{{this.cart.total}}</strong></label><br>
+    </div>
+</div>

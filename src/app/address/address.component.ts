@@ -21,8 +21,10 @@ export class AddressComponent implements OnInit {
   ngOnInit() {   }
   createAddress(){
     this.newAddress= new Address(this.name, this.addressline1,this.addressline2,this.addressline3,this.creditcard);
-    this.svc.create(this.newAddress);
+   
     console.log(this.newAddress);
+    alert("Order Placed.Generate Bill");
+    this.svc.address=this.newAddress;
   }
 
 }

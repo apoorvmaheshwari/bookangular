@@ -6,7 +6,7 @@ import {Book} from "./book";
   providedIn: 'root'
 })
 export class CartService {
-  cart:Book[]=[]
+  cart:Book[]=[];
   total:number=0;
 
   

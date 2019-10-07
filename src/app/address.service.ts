@@ -5,11 +5,9 @@ import { Address } from './address';
   providedIn: 'root'
 })
 export class AddressService {
-  address: Address[] = [];
+  address: Address;
 
 
   constructor() { }
-  create(a: Address) {
-    this.address.push(a);
-  }
+ 
 }

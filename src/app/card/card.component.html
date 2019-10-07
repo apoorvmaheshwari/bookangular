@@ -1,0 +1,14 @@
+<div class="row">
+    <div *ngFor="let book of svc.books" class="col-md-3">
+        <div class="card cardsize" style="width: 18rem; ">
+            <img src={{book.image}} class="card-img-top imagesize" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{book.name}}</h5>
+                <p class="card-text">Price:{{book.price}}<br>
+                    {{book.author}}</p>
+                <a href="#" class="btn btn-primary" routerLink="info/{{book.id}}">More Info</a>
+            </div>
+        </div>
+    </div>
+
+</div>
